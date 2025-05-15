@@ -3,7 +3,7 @@
 <section 
   x-data="{ mouseX: 0, mouseY: 0, isHovering: false }" 
   @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY"
-  class="relative text-[100px] ml-20 mt-20 select-none ">
+  class="relative text-[100px] ml-20 mt-10 select-none">
 
   <!-- Custom Cursor -->
   <div 
@@ -17,7 +17,7 @@
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="blur-sm hover:blur-none transition duration-200 cursor-none">
+    class="blur-sm hover:blur-none transition duration-200 cursor-none font-catavalo text-[120px]">
     PIXEL
   </h1>
   <h1 
