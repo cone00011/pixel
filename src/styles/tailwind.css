@@ -1,11 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import url("https://use.typekit.net/ctz4zoo.css");
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --font-prestige-elite-std: "prestige-elite-std", monospace;
 }
 
 @layer base {
@@ -18,9 +18,17 @@
   }
 }
 
-@layer components{
-
+@font-face {
+  font-family: "Catavalo";
+  src: url("/fonts/Catavalo-Light.woff2") format("woff2"), url("/fonts/Catavalo-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
-@layer utilities{
-  
+
+@layer components {
+}
+@layer utilities {
+  .font-catavalo {
+    font-family: "Catavalo", sans-serif;
+  }
 }
