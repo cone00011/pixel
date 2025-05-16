@@ -4,9 +4,36 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import ArtistCard from "../components/ArtistCard.astro";
+import viola_rama from "../assets/images/viola_rama.png";
+import bradon_morse from "../assets/images/bradon_morse.png";
+import danielle from "../assets/images/danielle.png";
 ---
 <MainLayout title="PIXEL">
+  <h1 class="opacity-[20px]  text-[80px] ml-20 mt-50 mb-20">
+    MEET THE ARTISTS
+  </h1>
+<ArtistCard
+  image={viola_rama}
+  name="Viola Rama"
+  date="27. June"
+  description="Viola Rama er en moderne kunstner, der arbejder med fotografi og kunstig intelligens (AI) for at skabe surrealistiske portrætter, der udfordrer grænserne mellem det menneskelige og det digitale. Hendes værker kombinerer teknologi og æstetik på en måde, der både fascinerer og provokerer, idet hun udforsker nye måder at se identitet og krop på gennem digital manipulation."
+/>
 
+<ArtistCard
+  image={bradon_morse}
+  name="Brandon Morse"
+  date="28. June"
+  description="Brandon Morse er en amerikansk kunstner, der arbejder primært med video-installationer og generativ kunst. Hans digitale værker er kendetegnet ved komplekse, algoritmiske strukturer, som skabes gennem kodning og realtidsgenerering. Morse's værker fokuserer ofte på temaer som tid, forfald og transformation, der visualiseres gennem abstrakte, digitale landskaber."
+  reverse={true}
+/>
+
+<ArtistCard
+  image={danielle}
+  name="Danielle Brathwaite-Shirley"
+  date="29. June"
+  description="Danielle Brathwaite-Shirley er en britisk kunstner, der arbejder med digitale medier, herunder interaktive spil, video-installationer og animation. Hendes værker fokuserer på at genfortælle sorte transpersoners historier gennem teknologi, hvor publikum inviteres til at interagere med hendes digitale verdener. Hendes kunstværker skaber rum for inklusion og udfordrer måden, vi tænker på identitet og teknologi."
+/>
 </MainLayout>
 
 <style>
