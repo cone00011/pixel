@@ -16,12 +16,15 @@
       const buttonHeight = button.offsetHeight;
       const viewportHeight = window.innerHeight;
   
-      // Hvor langt fra bunden af viewport knappen skal være, fx 16px (bottom-4)
+      // Afstand fra bunden af viewport til knappen
       const offset = 16;
+  
+      // Ekstra afstand fra footeren
+      const extraOffset = 80; // <-- Ændre denne værdi for mere/mindre afstand
   
       if (footerRect.top < viewportHeight - buttonHeight - offset) {
         // Når footer er tæt på knappen - justér knappen opad så den ikke overlapper
-        const overlap = (viewportHeight - buttonHeight - offset) - footerRect.top;
+        const overlap = (viewportHeight - buttonHeight - offset) - footerRect.top + extraOffset;
         button.style.bottom = `${offset + overlap}px`;
       } else {
         // Normal position forneden
@@ -29,4 +32,5 @@
       }
     });
   </script>
+  
   
