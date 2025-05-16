@@ -33,11 +33,11 @@ h2 {
 }
 
 h3 {
-  @apply text-3xl lg:text-[64px] font-bold font-prestige-elite-std;
+  @apply text-3xl lg:text-[38px] font-bold font-prestige-elite-std;
 }
 
 p {
-  @apply text-base lg:text-[18px] font-prestige-elite-std;
+  @apply text-base lg:text-[16px] font-prestige-elite-std;
 }
 
 /* Subtil pixel grid som baggrund */

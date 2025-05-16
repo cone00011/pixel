@@ -10,9 +10,11 @@ import viola_rama from "../assets/images/viola_rama.png";
 import bradon_morse from "../assets/images/bradon_morse.png";
 import danielle from "../assets/images/danielle.png";
 import Billedegalleri from "../components/Billedegalleri.astro";
+import Stickybutton from "../components/Stickybutton.astro";
 ---
 <MainLayout title="PIXEL">
-  <h2 class="opacity-[20px]  text-[80px] ml-20 mt-50 mb-20">
+  <Stickybutton></Stickybutton>
+  <h2 class="opacity-[20px]  mt-50 mb-20">
     MEET THE ARTISTS
   </h2>
 <ArtistCard
@@ -38,7 +40,9 @@ import Billedegalleri from "../components/Billedegalleri.astro";
 />
 
 <WhatIsPixel></WhatIsPixel>
+<Button>BUY TICKETS</Button>
 <Billedegalleri></Billedegalleri>
+
 </MainLayout>
 
 <style>
