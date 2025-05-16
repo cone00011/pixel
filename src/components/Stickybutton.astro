@@ -1,8 +1,32 @@
 ---
 ---
 <button
-  class="bg-white hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[24px] rounded-[20px] fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"
+  class="bg-white hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[24px] rounded-[20px] fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-2"
 >
   BUY TICKETS
 </button>
 
+<script>
+    document.addEventListener('scroll', () => {
+      const button = document.querySelector('button.fixed');
+      const footer = document.getElementById('footer');
+      if (!button || !footer) return;
+  
+      const footerRect = footer.getBoundingClientRect();
+      const buttonHeight = button.offsetHeight;
+      const viewportHeight = window.innerHeight;
+  
+      // Hvor langt fra bunden af viewport knappen skal være, fx 16px (bottom-4)
+      const offset = 16;
+  
+      if (footerRect.top < viewportHeight - buttonHeight - offset) {
+        // Når footer er tæt på knappen - justér knappen opad så den ikke overlapper
+        const overlap = (viewportHeight - buttonHeight - offset) - footerRect.top;
+        button.style.bottom = `${offset + overlap}px`;
+      } else {
+        // Normal position forneden
+        button.style.bottom = `${offset}px`;
+      }
+    });
+  </script>
+  
