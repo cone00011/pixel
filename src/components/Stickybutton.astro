@@ -1,36 +1,37 @@
 ---
 ---
 <button
-  class="bg-white hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[24px] rounded-[20px] fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-2"
+  class="bg-white hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[24px] rounded-[20px] fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-2  "
 >
   BUY TICKETS
 </button>
 
 <script>
-    document.addEventListener('scroll', () => {
-      const button = document.querySelector('button.fixed');
-      const footer = document.getElementById('footer');
-      if (!button || !footer) return;
-  
-      const footerRect = footer.getBoundingClientRect();
-      const buttonHeight = button.offsetHeight;
-      const viewportHeight = window.innerHeight;
-  
-      // Afstand fra bunden af viewport til knappen
-      const offset = 16;
-  
-      // Ekstra afstand fra footeren
-      const extraOffset = 80; // <-- Ændre denne værdi for mere/mindre afstand
-  
-      if (footerRect.top < viewportHeight - buttonHeight - offset) {
-        // Når footer er tæt på knappen - justér knappen opad så den ikke overlapper
-        const overlap = (viewportHeight - buttonHeight - offset) - footerRect.top + extraOffset;
-        button.style.bottom = `${offset + overlap}px`;
-      } else {
-        // Normal position forneden
-        button.style.bottom = `${offset}px`;
-      }
-    });
-  </script>
+  document.addEventListener('scroll', () => {
+    const button = document.querySelector('button.fixed');
+    const newsletter = document.getElementById('newsletter');
+    if (!button || !newsletter) return;
+
+    const newsletterRect = newsletter.getBoundingClientRect();
+    const buttonHeight = button.offsetHeight;
+    const viewportHeight = window.innerHeight;
+
+    // Afstand fra bunden af viewport til knappen
+    const offset = 16;
+
+    // Ekstra afstand fra Newsletter
+    const extraOffset = 40; // <-- Justér denne værdi for mere/mindre afstand
+
+    if (newsletterRect.top < viewportHeight - buttonHeight - offset) {
+      // Når newsletter er tæt på knappen - justér knappen opad så den ikke overlapper
+      const overlap = (viewportHeight - buttonHeight - offset) - newsletterRect.top + extraOffset;
+      button.style.bottom = `${offset + overlap}px`;
+    } else {
+      // Normal position forneden
+      button.style.bottom = `${offset}px`;
+    }
+  });
+</script>
+
   
   
