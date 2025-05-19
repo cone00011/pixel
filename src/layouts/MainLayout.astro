@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ArtistCard from "../components/ArtistCard.astro";
-import Pixel from "../components/Pixel.astro";
 import Menu from "../components/Menu.astro";
 import Stickybutton from "../components/Stickybutton.astro";
 import '../styles/tailwind.css';
@@ -25,7 +24,7 @@ const { title } = Astro.props;
 		</header>
 		
 		<main class="relative">
-  <Pixel></Pixel>
+
 			<div class="mx-[15px] md:mx-[20px] xl:mr-[210px] xl:ml-[80px]">
 			<slot />
 			
