@@ -1,0 +1,33 @@
+---
+import Alpine from 'alpinejs';
+---
+<div x-data="{ open: false }" class="relative">
+    <!-- Orange bar i toppen på mobil og til højre på desktop -->
+    <div class="fixed top-0 left-0 w-full lg:right-0 lg:left-auto lg:w-[160px] bg-white flex justify-between items-center py-4 px-6 z-40 lg:top-0 lg:h-screen lg:flex-col lg:items-center lg:justify-start border-b border-black lg:border-b-0 lg:border-l lg:border-black">
+        <button @click="open = !open" class="group cursor-pointer flex items-center space-x-3 lg:mt-5">
+            <div class="relative w-10 h-10">
+                <div class="absolute top-2 w-6 h-0.5 bg-black group-hover:bg-[#999999] transition-all"></div>
+                <div class="absolute top-4 w-8 h-0.5 bg-black group-hover:bg-[#999999] transition-all"></div>
+                <div class="absolute top-6 w-10 h-0.5 bg-black group-hover:bg-[#999999] transition-all"></div>
+            </div>
+            <span class="text-black text-[20px] font-p group-hover:text-[#999999] transition-colors font-prestige-elite-std">menu</span>
+        </button>
+    </div>
+
+    <!-- Drawer-menu -->
+    <div class="fixed top-0 right-0 w-full lg:w-[900px] lg:h-screen bg-white text-black z-100 transform transition-transform duration-300 border-b border-black lg:border-b-0 lg:border-l lg:border-black " 
+         :class="open ? 'translate-x-0' : 'translate-x-full'">
+         
+        <button @click="open = false" class="absolute top-4 right-10 text-black text-[40px] hover:text-[#999999] transition-colors z-50">
+            ✕
+        </button>
+        
+        <ul class="p-30 space-y-8 text-[30px] lg:text-[38px] lg:p-50">
+            <li class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999]"><a href="#">What is pixel?</a></li>
+            <li class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999]"><a href="#">Be apart of pixel</a></li>
+            <li class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999]"><a href="#">Buy tickets</a></li>
+            <li class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999]"><a href="#">FAQ</a></li>
+        </ul>
+        
+    </div>
+</div>
