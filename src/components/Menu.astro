@@ -34,14 +34,12 @@ x-data="{ mouseX: 0, mouseY: 0, isHovering: false }"
         </button>
         
         <ul  class="p-30 space-y-8 text-[30px] lg:text-[38px] lg:p-50">
-            <li @mouseenter="isHovering = true" 
-            @mouseleave="isHovering = false"  class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">What is pixel?</a></li>
-            <li @mouseenter="isHovering = true" 
-            @mouseleave="isHovering = false"  class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">Be apart of pixel</a></li>
-            <li @mouseenter="isHovering = true" 
-            @mouseleave="isHovering = false"  class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">Buy tickets</a></li>
-            <li @mouseenter="isHovering = true" 
-            @mouseleave="isHovering = false"  class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">FAQ</a></li>
+            <li   class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">What is pixel?</a></li>
+            <li   class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">Be apart of pixel</a></li>
+            <li class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none">
+                <a href="/buy_tickets" class="block w-full h-full">Buy tickets</a>
+            </li>
+            <li   class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">FAQ</a></li>
         </ul>
         
     </div>

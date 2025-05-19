@@ -1,0 +1,79 @@
+---
+---
+<section 
+  x-data="{ mouseX: 0, mouseY: 0, isHovering: false, isDesktop: window.innerWidth >= 1024, active: null }" 
+  @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY"
+  @resize.window="isDesktop = window.innerWidth >= 1024"
+  class="relative text-[80px] ml-10 mt-20 select-none">
+
+  <!-- Custom Cursor (kun på desktop) -->
+  <div 
+    x-show="isHovering && isDesktop" 
+    :style="{ left: mouseX + 'px', top: mouseY + 'px' }" 
+    class="fixed pointer-events-none text-black text-[20px] z-50">
+    PIXEL
+  </div>
+
+  <!-- FULL WEEKEND -->
+  <div class="relative group ml-0 border-b-2 border-transparent mt-30 lg:mt-0">
+    <h2 
+      @mouseenter="isHovering = isDesktop" 
+      @mouseleave="isHovering = false" 
+      @click="active = active === 1 ? null : 1" 
+      :class="isDesktop ? 'blur-none hover:scale-110 hover:translate-x-2 hover:translate-y-2 group-hover:translate-y-1 cursor-none' : 'cursor-pointer'"
+      class="transition duration-200 transform">
+      FULL WEEKEND
+      <span class="absolute left-0 bottom-0 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
+    </h2>
+    <p 
+      x-show="active === 1 || isDesktop" 
+      x-transition 
+      class="mt-10 mr-20 transition duration-200 transform"
+      :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
+      Enjoy the full experience across three days.
+    </p>
+  </div>
+
+  <!-- ONE DAY -->
+  <div class="relative group mr-20 mt-10 border-b-2 border-transparent text-right">
+    <h2 
+      @mouseenter="isHovering = isDesktop" 
+      @mouseleave="isHovering = false" 
+      @click="active = active === 2 ? null : 2" 
+      :class="isDesktop ? 'blur-none hover:scale-110 hover:translate-x-2 hover:translate-y-2 group-hover:translate-y-1 cursor-none' : 'cursor-pointer'"
+      class="transition duration-200 transform">
+      ONE DAY
+      <span class="absolute right-0 bottom-0 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
+    </h2>
+    <p 
+      x-show="active === 2 || isDesktop" 
+      x-transition 
+      class="mt-10 transition duration-200 transform"
+      :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
+      Perfect for those with limited time.
+    </p>
+  </div>
+
+  <!-- MIX & MATCH -->
+  <div class="relative group mt-10 border-b-2 border-transparent">
+    <h2 
+      @mouseenter="isHovering = isDesktop" 
+      @mouseleave="isHovering = false" 
+      @click="active = active === 3 ? null : 3" 
+      :class="isDesktop ? 'blur-none hover:scale-110 hover:translate-x-2 hover:translate-y-2 group-hover:translate-y-1 cursor-none' : 'cursor-pointer'"
+      class="transition duration-200 transform">
+      MIX & MATCH
+      <span class="absolute left-0 bottom-0 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
+    </h2>
+    <p 
+      x-show="active === 3 || isDesktop" 
+      x-transition 
+      class="mt-10 mr-20 transition duration-200 transform"
+      :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
+      Choose and combine your days as you wish.
+    </p>
+  </div>
+
+</section>
+
+
