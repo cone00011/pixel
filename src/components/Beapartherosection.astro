@@ -1,0 +1,45 @@
+---
+---
+<section 
+x-data="{
+    x: Math.random() * (window.innerWidth - 300),
+    y: Math.random() * (window.innerHeight - 100),
+    dx: (Math.random() - 0.5) * 5,
+    dy: (Math.random() - 0.5) * 5,
+    speedFactor: window.innerWidth < 768 ? 2 : 4.1, // Slower on mobile
+    mouseX: 0,
+    mouseY: 0,
+    isHovering: false,
+    move() {
+      setInterval(() => {
+        this.x += this.dx * this.speedFactor;
+        this.y += this.dy * this.speedFactor;
+  
+        if (this.x <= 0 || this.x >= window.innerWidth - 300) this.dx *= -1;
+        if (this.y <= 0 || this.y >= window.innerHeight - 100) this.dy *= -1;
+      }, 16); // ~60 FPS
+    }
+  }"
+  
+  x-init="move()"
+  @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY"
+  class="lg:w-[1900px] max-w-7xl h-screen bg-transparent mx-auto overflow-hidden relative flex items-center justify-center"
+>
+
+  <!-- Custom Cursor -->
+  <div 
+    x-show="isHovering" 
+    :style="{ left: mouseX + 'px', top: mouseY + 'px' }" 
+    class="fixed pointer-events-none text-black text-[20px] z-50">
+    PIXEL
+  </div>
+
+  <!-- Floating Text -->
+  <div 
+    :style="{ left: x + 'px', top: y + 'px' }" 
+    @mouseenter="isHovering = true" 
+    @mouseleave="isHovering = false" 
+    class="absolute text-[60px] lg:text-[100px] text-black lg:blur-sm hover:blur-none transition duration-200 cursor-none select-none">
+    SUBMIT YOUR ARTWORK
+  </div>
+</section>
