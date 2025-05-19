@@ -12,22 +12,24 @@
 </div>
 
 <script is:inline>
+import Herosection from "./Herosection.astro";
+
   function updatePixelVisibility() {
     const pixel = document.getElementById("pixel-text");
-    const header = document.getElementById("header");
+    const header = document.getElementById("herosection");
     const footer = document.getElementById("footer");
 
-    if (!pixel || !header || !footer) return;
+    if (!pixel || !herosection || !footer) return;
 
     const pixelMid = window.innerHeight / 2;
 
-    const headerBottom = header.getBoundingClientRect().bottom;
+    const herosectionBottom = herosection.getBoundingClientRect().bottom;
     const footerTop = footer.getBoundingClientRect().top;
 
-    const isAfterHeader = headerBottom < pixelMid;
+    const isAfterHerosection = herosectionBottom < pixelMid;
     const isBeforeFooter = footerTop > pixelMid;
 
-    pixel.style.opacity = (isAfterHeader && isBeforeFooter) ? "0.2" : "0";
+    pixel.style.opacity = (isAfterHerosection && isBeforeFooter) ? "0.2" : "0";
   }
 
   window.addEventListener("scroll", updatePixelVisibility);
