@@ -3,7 +3,7 @@
 <section 
   x-data="{ mouseX: 0, mouseY: 0, isHovering: false }" 
   @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY"
-  class="relative text-[60px]  lg:text-[100px] ml-20 mt-30 lg:mt-10 select-none">
+  class="relative text-[60px] mt-30 lg:text-[100px] ml-20 lg:mt-30 select-none">
 
   <!-- Custom Cursor -->
   <div 
@@ -17,25 +17,25 @@
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none font-catavalo text-[70px] lg:text-[120px]">
-    PIXEL
+    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none transform hover:scale-110 hover:translate-x-2 hover:translate-y-2">
+    WHAT
   </h1>
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none">
-    DIGITAL ART FESTIVAL
+    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none transform hover:scale-110 hover:translate-x-2 hover:translate-y-2 lg:ml-60">
+    TICKET
   </h1>
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none">
-    27 - 29 JUNE
+    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none transform hover:scale-110 hover:translate-x-2 hover:translate-y-2 lg:ml-120">
+    SUITS
   </h1>
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none">
-    NIKOLAJ KUNSTHAL
+    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none transform hover:scale-110 hover:translate-x-2 hover:translate-y-2 lg:ml-190">
+    YOU?
   </h1>
 </section>
