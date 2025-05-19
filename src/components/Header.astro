@@ -1,41 +1,47 @@
 ---
+import Alpine from 'alpinejs';
 ---
 <section 
-  x-data="{ mouseX: 0, mouseY: 0, isHovering: false }" 
-  @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY"
-  class="relative text-[60px]  lg:text-[100px] ml-20 mt-30 lg:mt-10 select-none">
-
-  <!-- Custom Cursor -->
+x-data="{ mouseX: 0, mouseY: 0, isHovering: false }" 
+  @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY">
+      <!-- Custom Cursor -->
   <div 
-    x-show="isHovering" 
-    :style="{ left: mouseX + 'px', top: mouseY + 'px' }" 
-    class="fixed pointer-events-none text-black text-[20px] z-50">
-    PIXEL
-  </div>
+  x-show="isHovering" 
+  :style="{ left: mouseX + 'px', top: mouseY + 'px' }" 
+  class="fixed pointer-events-none text-black text-[20px] z-50">
+  PIXEL
+</div>
 
-  <!-- Tekst der skal have hover-effekt -->
-  <h1 
-    @mouseenter="isHovering = true" 
-    @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none font-catavalo text-[70px] lg:text-[120px]">
-    PIXEL
-  </h1>
-  <h1 
-    @mouseenter="isHovering = true" 
-    @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none">
-    DIGITAL ART FESTIVAL
-  </h1>
-  <h1 
-    @mouseenter="isHovering = true" 
-    @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none">
-    27 - 29 JUNE
-  </h1>
-  <h1 
-    @mouseenter="isHovering = true" 
-    @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none">
-    NIKOLAJ KUNSTHAL
-  </h1>
+<div x-data="{ open: false }" class="relative">
+    <!-- Orange bar i toppen på mobil og til højre på desktop -->
+    <div class="fixed top-0 left-0 w-full lg:right-0 lg:left-auto lg:w-[160px] bg-white flex justify-between items-center py-4 px-6 z-40 lg:top-0 lg:h-screen lg:flex-col lg:items-center lg:justify-start border-b border-black lg:border-b-0 lg:border-l lg:border-black">
+        <button @click="open = !open" class="group cursor-pointer flex items-center space-x-3 lg:mt-5">
+            <div class="relative w-10 h-10">
+                <div class="absolute top-2 w-6 h-0.5 bg-black group-hover:bg-[#999999] transition-all"></div>
+                <div class="absolute top-4 w-8 h-0.5 bg-black group-hover:bg-[#999999] transition-all"></div>
+                <div class="absolute top-6 w-10 h-0.5 bg-black group-hover:bg-[#999999] transition-all"></div>
+            </div>
+            <span class="text-black text-[20px] font-p group-hover:text-[#999999] transition-colors font-prestige-elite-std">menu</span>
+        </button>
+    </div>
+
+    <!-- Drawer-menu -->
+    <div class="fixed top-0 right-0 w-full lg:w-[900px] lg:h-screen bg-white text-black z-100 transform transition-transform duration-300 border-b border-black lg:border-b-0 lg:border-l lg:border-black " 
+         :class="open ? 'translate-x-0' : 'translate-x-full'">
+         
+        <button @click="open = false" class="absolute top-4 right-10 text-black text-[40px] hover:text-[#999999] transition-colors z-50">
+            ✕
+        </button>
+        
+        <ul  class="p-30 space-y-8 text-[30px] lg:text-[38px] lg:p-50">
+            <li   class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">What is pixel?</a></li>
+            <li   class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">Be apart of pixel</a></li>
+            <li class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none">
+                <a href="/buy_tickets" class="block w-full h-full">Buy tickets</a>
+            </li>
+            <li   class="font-prestige-elite-std lg:hover:italic lg:hover:text-black hover:text-[#999999] cursor-none"><a href="#">FAQ</a></li>
+        </ul>
+        
+    </div>
+</div>
 </section>
