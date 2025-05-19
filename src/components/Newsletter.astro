@@ -1,0 +1,30 @@
+---
+import Button from '../components/Button.astro';
+---
+
+<section class="max-w-screen-xl mx-auto px-4 py-24 text-center">
+  <!-- Overskrift -->
+  <h3 class="mb-15">
+    Limited tickets. Unlimited art.
+  </h3>
+
+  <!-- Undertekst -->
+  <p class="max-w-2xl mx-auto mb-15 text-sm md:text-base font-prestige-elite-std">
+    Sign up – and get notified before it’s sold out. The newsletter gives you early access.
+  </p>
+
+   <!-- Form -->
+  <form class="flex flex-col items-center gap-6 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+    <label for="email" class="sr-only">E-mail</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="E-mail" 
+      required 
+      class="w-full mb-15 border border-black rounded-full px-6 py-3 text-center text-base font-prestige-elite-std focus:outline-none focus:ring-2 focus:ring-black"
+    />
+
+    <Button>SUBSCRIBE</Button>
+  </form>
+</section>
