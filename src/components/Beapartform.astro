@@ -1,0 +1,67 @@
+---
+import Button from "./Button.astro"
+---
+
+<form class="max-w-4xl mx-auto p-10 lg:p-20 border border-black font-prestige-elite-std text-[16px] bg-white relative">
+  <!-- Grid baggrund -->
+  <div class="absolute inset-0 pointer-events-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'none\\' stroke=\\'%23e5e7eb\\' stroke-width=\\'1\\' /></svg>')] z-0"></div>
+
+  <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+    <div>
+      <label for="name" class="block mb-2 font-prestige-elite-std">Name</label>
+      <input id="name" type="text" class="w-full border border-black rounded-[15px] px-4 py-2" />
+    </div>
+    <div>
+      <label for="email" class="block mb-2 font-prestige-elite-std">E-mail</label>
+      <input id="email" type="email" class="w-full border border-black rounded-[15px] px-4 py-2" />
+    </div>
+    <div>
+      <label for="title" class="block mb-2 font-prestige-elite-std">Artwork title</label>
+      <input id="title" type="text" class="w-full border border-black rounded-[15px] px-4 py-2" />
+    </div>
+
+    <!-- Custom file upload -->
+    <div x-data="{ fileName: 'Choose file' }" class="relative font-prestige-elite-std">
+      <label for="file" class="block mb-2 font-prestige-elite-std">Upload</label>
+      <div class="relative">
+        <input 
+          id="file" 
+          type="file" 
+          class="absolute inset-0 opacity-0 z-20 cursor-pointer"
+          @change="fileName = $event.target.files[0]?.name || 'Choose file'"
+        />
+        <div class="w-full border border-black rounded-[15px] px-4 py-2 pr-10 bg-white text-black cursor-pointer relative z-10">
+          <span x-text="fileName"></span>
+          <div class="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-black text-sm">▼</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Artist Statement -->
+  <div class="relative z-10 mb-10">
+    <label for="statement" class="block mb-2 font-prestige-elite-std">Artist Statement</label>
+    <textarea id="statement" rows="5" class="w-full border border-black rounded-[15px] px-4 py-2"></textarea>
+  </div>
+
+  <!-- Checkboxes -->
+  <div class="relative z-10 mb-10 space-y-4">
+    <label class="flex items-start space-x-3">
+      <input type="checkbox" class="mt-1 border border-black rounded" />
+      <span class="italic">I agree that my art may be displayed during the festival.</span>
+    </label>
+    <label class="flex items-start space-x-3">
+      <input type="checkbox" class="mt-1 border border-black rounded" />
+      <span class="italic">I agree that I am the original creator of the art work.</span>
+    </label>
+    <label class="flex items-start space-x-3">
+      <input type="checkbox" class="mt-1 border border-black rounded" />
+      <span class="italic">I have read <a href="#" class="underline">Terms & Conditions</a></span>
+    </label>
+  </div>
+
+  <!-- Submit -->
+  <div class="text-center relative z-10">
+    <Button>Submit your artwork</Button>
+  </div>
+</form>
