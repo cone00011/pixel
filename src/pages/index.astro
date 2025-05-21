@@ -10,46 +10,46 @@ import viola_rama from "../assets/images/viola_rama.png";
 import bradon_morse from "../assets/images/bradon_morse.png";
 import danielle from "../assets/images/danielle.png";
 import Billedegalleri from "../components/Billedegalleri.astro";
-
 import Pixel from "../components/Pixel.astro";
-
 import Herosection from "../components/Herosection.astro";
-
 import ApartofPixel from "../components/ApartofPixel.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Stickybutton from "../components/Stickybutton.astro";
 ---
+
 <MainLayout title="PIXEL">
 
-
-  <Herosection id="herosection"></Herosection>
+  <!-- HEROSECTION MED ID -->
+<Herosection id="herosection"></Herosection>
   <Stickybutton></Stickybutton>
   <Pixel></Pixel>
 
-  <h2 class="opacity-[20px]  mt-50 mb-20">
+ 
+  <h2 class="opacity-[20px] mt-50 mb-20">
     MEET THE ARTISTS
   </h2>
-<ArtistCard
-  image={viola_rama}
-  name="Viola Rama"
-  date="27. June"
-  description="Viola Rama is a contemporary artist working with photography and artificial intelligence (AI) to create surreal portraits that challenge the boundaries between the human and the digital. Her works combine technology and aesthetics in a way that both fascinates and provokes, as she explores new ways of viewing identity and the body through digital manipulation."
-/>
 
-<ArtistCard
-  image={bradon_morse}
-  name="Brandon Morse"
-  date="28. June"
-  description="Brandon Morse is an American artist who primarily works with video installations and generative art. His digital works are characterized by complex, algorithmic structures created through coding and real-time generation. Morse's pieces often focus on themes such as time, decay, and transformation, visualized through abstract digital landscapes."
-  reverse={true}
-/>
+  <ArtistCard
+    image={viola_rama}
+    name="Viola Rama"
+    date="27. June"
+    description="Viola Rama is a contemporary artist working with photography and artificial intelligence (AI) to create surreal portraits that challenge the boundaries between the human and the digital. Her works combine technology and aesthetics in a way that both fascinates and provokes, as she explores new ways of viewing identity and the body through digital manipulation."
+  />
 
-<ArtistCard
-  image={danielle}
-  name="Danielle Brathwaite-Shirley"
-  date="29. June"
-  description="Danielle Brathwaite-Shirley is a British artist working with digital media, including interactive games, video installations, and animation. Her work focuses on retelling the stories of Black trans people through technology, inviting audiences to interact with her digital worlds. Her artworks create space for inclusion and challenge the way we think about identity and technology."
-/>
+  <ArtistCard
+    image={bradon_morse}
+    name="Brandon Morse"
+    date="28. June"
+    description="Brandon Morse is an American artist who primarily works with video installations and generative art. His digital works are characterized by complex, algorithmic structures created through coding and real-time generation. Morse's pieces often focus on themes such as time, decay, and transformation, visualized through abstract digital landscapes."
+    reverse={true}
+  />
+
+  <ArtistCard
+    image={danielle}
+    name="Danielle Brathwaite-Shirley"
+    date="29. June"
+    description="Danielle Brathwaite-Shirley is a British artist working with digital media, including interactive games, video installations, and animation. Her work focuses on retelling the stories of Black trans people through technology, inviting audiences to interact with her digital worlds. Her artworks create space for inclusion and challenge the way we think about identity and technology."
+  />
 
 <WhatIsPixel></WhatIsPixel>
 <ApartofPixel></ApartofPixel>
