@@ -28,7 +28,7 @@
 /* === Globale Tekststørrelser === */
 
 h2 {
-  @apply text-3xl lg:text-[80px] mb-[40px] lg:mb-[50px];
+  @apply text-[40px] lg:text-[80px] mb-[40px] lg:mb-[50px];
 }
 
 h3 {
