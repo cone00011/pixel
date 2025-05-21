@@ -1,14 +1,20 @@
 ---
 ---
-<button
-  class="bg-white hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[24px] rounded-[20px] fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-2  "
->
-  BUY TICKETS
-</button>
+<div id="buy-tickets-wrapper" class="fixed left-0 w-full z-50 px-[15px] md:px-[20px] xl:pl-[80px] xl:pr-[210px] pointer-events-none mt-12">
+  <div class="relative">
+    <button
+      id="buy-tickets-button"
+      class="bg-white hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[20px] rounded-[20px] mx-auto block mb-2 pointer-events-auto"
+      style="position: absolute; bottom: -90px; left: 50%; transform: translateX(-50%);"
+    >
+      BUY TICKETS
+    </button>
+  </div>
+</div>
 
 <script>
   document.addEventListener('scroll', () => {
-    const button = document.querySelector('button.fixed');
+    const button = document.getElementById('buy-tickets-button');
     const newsletter = document.getElementById('newsletter');
     if (!button || !newsletter) return;
 
@@ -16,22 +22,18 @@
     const buttonHeight = button.offsetHeight;
     const viewportHeight = window.innerHeight;
 
-    // Afstand fra bunden af viewport til knappen
-    const offset = 16;
-
-    // Ekstra afstand fra Newsletter
-    const extraOffset = 40; // <-- Justér denne værdi for mere/mindre afstand
+    const offset = 0; // ← Matcher inline-style
+    const extraOffset = 0;
 
     if (newsletterRect.top < viewportHeight - buttonHeight - offset) {
-      // Når newsletter er tæt på knappen - justér knappen opad så den ikke overlapper
       const overlap = (viewportHeight - buttonHeight - offset) - newsletterRect.top + extraOffset;
       button.style.bottom = `${offset + overlap}px`;
     } else {
-      // Normal position forneden
       button.style.bottom = `${offset}px`;
     }
   });
 </script>
+
 
   
   

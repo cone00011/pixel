@@ -28,11 +28,11 @@
 /* === Globale Tekststørrelser === */
 
 h2 {
-  @apply text-3xl lg:text-[80px];
+  @apply text-3xl lg:text-[80px] mb-[40px] lg:mb-[50px];
 }
 
 h3 {
-  @apply text-3xl lg:text-[38px] font-bold font-prestige-elite-std;
+  @apply text-3xl lg:text-[38px] mb-[40px] lg:mb-[50px] font-bold font-prestige-elite-std;
 }
 
 p {

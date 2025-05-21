@@ -19,6 +19,7 @@ import Pixel from "../components/Pixel.astro";
 import Ticketform from "../components/Ticketform.astro";
 import Beapartherosection from "../components/Beapartherosection.astro";
 import Beapartform from "../components/Beapartform.astro";
+import Areuanartist from "../components/Areuanartist.astro";
 ---
 
 <MainLayout title="Be Apart of Pixel">
@@ -28,6 +29,11 @@ import Beapartform from "../components/Beapartform.astro";
   <!-- Hero med ID -->
   <Beapartherosection id="herosection" />
   <Pixel />
+ 
+  <Areuanartist></Areuanartist>
+  <section class="flex justify-center items-center mt-30 lg:mt-50">
+    <h2>SUBMIT YOUR ART</h2>
+  </section>
   <Beapartform />
 
 </MainLayout>
