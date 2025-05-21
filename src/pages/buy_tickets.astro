@@ -18,16 +18,20 @@ import Logo from "../components/Logo.astro";
 import Pixel from "../components/Pixel.astro";
 import Ticketform from "../components/Ticketform.astro";
 ---
+
 <MainLayout title="Buy Tickets">
-    <Logo></Logo>
-  <Buyticketsheader></Buyticketsheader>
-  <Pixel></Pixel>
-  <Billettyper></Billettyper>
-  
-  <section  class="flex justify-center items-center mt-30 lg:mt-50 mb-15 lg:mb-20 ">
-<h2>BUY YOUR TICKET</h2>
-</section>
-<Ticketform></Ticketform>
+
+  <Logo />
+
+  <Buyticketsheader id="herosection" />
+  <Pixel />
+  <Billettyper />
+
+  <section class="flex justify-center items-center mt-30 lg:mt-50 mb-15 lg:mb-20">
+    <h2>BUY YOUR TICKET</h2>
+  </section>
+
+  <Ticketform />
 </MainLayout>
 
 <style>
