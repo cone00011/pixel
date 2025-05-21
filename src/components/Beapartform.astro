@@ -2,7 +2,7 @@
 import Button from "./Button.astro"
 ---
 
-<form class="max-w-4xl mx-auto p-10 lg:p-20 border border-black font-prestige-elite-std text-[16px] bg-white relative">
+<form class="max-w-4xl mx-auto p-10 lg:p-20 border border-black font-prestige-elite-std text-[16px] relative">
   <!-- Grid baggrund -->
   <div class="absolute inset-0 pointer-events-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'none\\' stroke=\\'%23e5e7eb\\' stroke-width=\\'1\\' /></svg>')] z-0"></div>
 
@@ -44,21 +44,23 @@ import Button from "./Button.astro"
     <textarea id="statement" rows="5" class="w-full border border-black rounded-[15px] px-4 py-2"></textarea>
   </div>
 
-  <!-- Checkboxes -->
-  <div class="relative z-10 mb-10 space-y-4">
+ <!-- Checkboxes -->
+<div class="relative z-10 mb-10 space-y-4">
     <label class="flex items-start space-x-3">
-      <input type="checkbox" class="mt-1 border border-black rounded" />
+      <input type="checkbox" class="mt-1 w-5 h-5 border border-black rounded appearance-none checked:bg-black checked:border-black" />
       <span class="italic">I agree that my art may be displayed during the festival.</span>
     </label>
     <label class="flex items-start space-x-3">
-      <input type="checkbox" class="mt-1 border border-black rounded" />
+      <input type="checkbox" class="mt-1 w-5 h-5 border border-black rounded appearance-none checked:bg-black checked:border-black" />
       <span class="italic">I agree that I am the original creator of the art work.</span>
     </label>
     <label class="flex items-start space-x-3">
-      <input type="checkbox" class="mt-1 border border-black rounded" />
+      <input type="checkbox" class="mt-1 w-5 h-5 border border-black rounded appearance-none checked:bg-black checked:border-black" />
       <span class="italic">I have read <a href="#" class="underline">Terms & Conditions</a></span>
     </label>
   </div>
+  
+  
 
   <!-- Submit -->
   <div class="text-center relative z-10">
