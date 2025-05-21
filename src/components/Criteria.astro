@@ -1,0 +1,68 @@
+---
+
+---
+<div class="w-full">
+    <div 
+      x-data="{ open: null }" 
+      x-cloak 
+      class="max-w-4xl mx-auto p-5 lg:p-10 font-prestige-elite-std text-[16px] relative"
+    >
+      <!-- Criteria -->
+      <div class="border border-black p-4 mb-10 ">
+        <button 
+          @click="open = open === 'criteria' ? null : 'criteria'" 
+          class="flex items-center justify-between w-full text-left"
+        >
+          <p class="font-bold">Criteria</p>
+          <span class="text-black text-[12px] transform transition-transform duration-300"
+                :class="{ 'rotate-180': open === 'criteria' }">
+                ▼
+          </span>
+        </button>
+        <div x-show="open === 'criteria'" x-collapse class="mt-2">
+            <p class="text-gray-700 mt-2 ">
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    <strong>Digital Media Only:</strong> PIXEL is dedicated to highlighting work that is/can be digitally produced – The show will be a curated group exhibit utilizing our seamless wall-to-floor immersive digital canvas. We’re asking each artist to submit one piece of content that best encapsulates their artistic vision in this unique space.
+                  </li>
+                  <li>
+                    <strong>No Age Limit:</strong> Creativity has no boundaries, and neither do we. Artists of all ages are welcome.
+                  </li>
+                  <li>
+                    <strong>Diversity Matters:</strong> We value and celebrate diversity in all its forms and career levels. Our goal is to showcase a wide range of perspectives from across the creative world.
+                  </li>
+                  <li>
+                    <strong>Open to Worldwide Talent:</strong> Artists from all corners of the globe are encouraged to apply. Our inaugural cohort will highlight the incredible work of international creators.
+                  </li>
+                  <li>
+                    <strong>Professional Experience:</strong> Whether you’re an emerging artist, mid-career, or established, we want to see your work. However, preference will be given to artists whose work has yet to be shown in a permanent gallery space, particularly in the United States.
+                  </li>
+                </ul>
+              </p>
+              
+        </div>
+      </div>
+  
+      <!-- Review Process -->
+      <div class="border border-black p-4">
+        <button 
+          @click="open = open === 'review' ? null : 'review'" 
+          class="flex items-center justify-between w-full text-left"
+        >
+          <p class="font-bold">Review process</p>
+          <span class="text-black text-[12px] transform transition-transform duration-300"
+                :class="{ 'rotate-180': open === 'review' }">
+                ▼
+          </span>
+        </button>
+        <div x-show="open === 'review'" x-collapse class="mt-2">
+          <p class="text-gray-700 mt-2">
+            Our goal is for PIXEL digital art festival to showcase how the genre of immersive digital art can stretch and evolve.
+
+With that directive in mind, all submissions will be reviewed by our PIXEL Studio team as well as our Advisory Board, ensuring that curatorially, PIXEL is always evolving and pushing the boundaries of the discipline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

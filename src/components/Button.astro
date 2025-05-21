@@ -1,5 +1,18 @@
 ---
+const { href } = Astro.props;
 ---
-<button class="bg-transparent hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[20px] rounded-[20px]">
+
+{href ? (
+  <a
+    href={href}
+    class="bg-transparent hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[20px] rounded-[20px] inline-block text-center"
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    class="bg-transparent hover:bg-black text-black font-prestige-elite-std font-bold hover:text-white py-1 px-4 border border-black hover:border-transparent lg:text-[20px] rounded-[20px]"
+  >
     <slot />
   </button>
+)}

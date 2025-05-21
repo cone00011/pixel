@@ -27,7 +27,11 @@ const imageCol = reverse ? 'md:col-span-5' : 'md:col-span-5';
 
   <!-- Billede -->
   <div class={`col-span-1 ${imageCol} ${imageOrder} flex justify-center`}>
-    <img src={image.src} alt={name} class="w-full max-w-sm object-contain" />
+    <img 
+      src={image.src} 
+      alt={name} 
+      class="w-[60%] sm:w-[40%] md:w-auto lg:w-full lg:max-w-sm object-contain" 
+    />
   </div>
-</div>
+  
 
