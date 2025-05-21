@@ -4,7 +4,7 @@
   <div class="w-full h-full flex justify-center items-start px-[15px] md:px-[20px] xl:pr-[210px] xl:pl-[80px]">
     <h1
       id="pixel-text"
-      class="text-[20vw] sm:text-[25vw] font-catavalo opacity-0 transition-opacity duration-200 select-none leading-none tracking-tight blur-[5px] w-full text-center"
+      class="text-[20vw] sm:text-[25vw] font-catavalo opacity-20 transition-opacity duration-200 select-none leading-none tracking-tight blur-[5px] w-full text-center"
     >
       PIXEL
     </h1>
@@ -12,30 +12,35 @@
 </div>
 
 <script is:inline>
-import Herosection from "./Herosection.astro";
-
   function updatePixelVisibility() {
     const pixel = document.getElementById("pixel-text");
-    const header = document.getElementById("herosection");
+    const herosection = document.getElementById("herosection");
     const footer = document.getElementById("footer");
 
     if (!pixel || !herosection || !footer) return;
 
-    const pixelMid = window.innerHeight / 2;
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
 
-    const herosectionBottom = herosection.getBoundingClientRect().bottom;
-    const footerTop = footer.getBoundingClientRect().top;
+    const herosectionBottom = herosection.getBoundingClientRect().bottom + scrollY;
+    const footerTop = footer.getBoundingClientRect().top + scrollY;
 
-    const isAfterHerosection = herosectionBottom < pixelMid;
-    const isBeforeFooter = footerTop > pixelMid;
+    const pixelCenter = scrollY + viewportHeight / 2;
 
-    pixel.style.opacity = (isAfterHerosection && isBeforeFooter) ? "0.2" : "0";
+    const isVisible = pixelCenter > herosectionBottom && pixelCenter < footerTop;
+
+    pixel.style.opacity = isVisible ? "0.2" : "0";
   }
 
   window.addEventListener("scroll", updatePixelVisibility);
   window.addEventListener("resize", updatePixelVisibility);
   window.addEventListener("load", updatePixelVisibility);
 </script>
+
+
+
+
+
 
 
 
