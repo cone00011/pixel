@@ -14,60 +14,40 @@
  </div>
 
  <!-- Galleri Sektion -->
- <section class="container  px-4 py-8 lg:mt-20 ">
-
-   <div
-     class="grid grid-cols-2 md:grid-cols-3 gap-4"
-   >
-     <!-- Kolonne 1 -->
-     <div class="grid gap-4">
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full col-start-1 col-end-3 row-start-1 transition-transform duration-300 ease-in-out lg:hover:scale-105 lg:hover:z-10"
-           src="/img/Billede_1_col1.webp"
-           alt="billede 1"
-         />
-       </div>
-
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-           src="/img/billede2_col1.webp"
-           alt="billede 2"
-         />
-       </div>
-
-       <a href="/buy_tickets">
-        <span class="sr-only">Køb billetter</span>
-        <div 
-          @mouseenter="isHovering = true" 
-          @mouseleave="isHovering = false"
-          class="cursor-none"
-        >
-          <video
-            class="h-auto max-w-full mt-40 transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-            autoplay
-            muted
-            loop
-            playsinline
-          >
-            <source src="/img/buy_tickets.mp4" type="video/mp4" />
-          </video>
+ <section class="container px-4 py-8 lg:mt-20">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <!-- Kolonne 1 -->
+    <div class="grid gap-4">
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full col-start-1 col-end-3 row-start-1 transition-transform duration-300 ease-in-out lg:group-hover:scale-105 lg:group-hover:z-10"
+          src="/img/Billede_1_col1.webp"
+          alt="billede 1"
+        />
+        <div class="absolute inset-0 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Danielle Brathwaite-Shirley </h3>
         </div>
-      </a>
-      
-     </div>
+      </div>
 
-     <!-- Kolonne 2 -->
-     <div class="grid gap-4">
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full transition-transform duration-300 ease-in-out lg:group-hover:scale-110 lg:group-hover:z-10"
+          src="/img/billede2_col1.webp"
+          alt="billede 2"
+        />
+        <div class="absolute inset-0 text-white  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Viola Rama</h3>
+        </div>
+      </div>
+
       <a href="/buy_tickets">
         <span class="sr-only">Køb billetter</span>
         <div 
@@ -86,71 +66,108 @@
           </video>
         </div>
       </a>
-      
+    </div>
 
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full mt-40 lg:mt-0 transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-           src="/img/billede6_col4.webp"
-           alt=""
-         />
-       </div>
+    <!-- Kolonne 2 -->
+    <div class="grid gap-4">
+      <a href="/buy_tickets">
+        <span class="sr-only">Køb billetter</span>
+        <div 
+          @mouseenter="isHovering = true" 
+          @mouseleave="isHovering = false"
+          class="cursor-none"
+        >
+          <video
+            class="h-auto max-w-full mt-40 transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="/img/buy_tickets.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </a>
 
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full transition-transform mt-60 lg:mt-0 duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-           src="/img/billede4_col2.webp"
-           alt=""
-         />
-       </div>
-     </div>
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full mt-40 lg:mt-0 transition-transform duration-300 ease-in-out lg:group-hover:scale-110 lg:group-hover:z-10"
+          src="/img/billede6_col4.webp"
+          alt=""
+        />
+        <div class="absolute inset-0 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Danielle Brathwaite-Shirley</h3>
+        </div>
+      </div>
 
-     <!-- Kolonne 3 -->
-     <div class="grid gap-4">
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-           src="/img/billede7_col4.webp"
-           alt=""
-         />
-       </div>
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full transition-transform mt-60 lg:mt-0 duration-300 ease-in-out lg:group-hover:scale-110 lg:group-hover:z-10"
+          src="/img/billede4_col2.webp"
+          alt=""
+        />
+        <div class="absolute inset-0 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Brandon Morse</h3>
+        </div>
+      </div>
+    </div>
 
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full mt-30 transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-           src="/img/billede5_col3.webp"
-           alt=""
-         />
-       </div>
+    <!-- Kolonne 3 -->
+    <div class="grid gap-4">
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full transition-transform duration-300 ease-in-out lg:group-hover:scale-110 lg:group-hover:z-10"
+          src="/img/billede7_col4.webp"
+          alt=""
+        />
+        <div class="absolute inset-0 text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Viola Rama</h3>
+        </div>
+      </div>
 
-       <div 
-         @mouseenter="isHovering = true" 
-         @mouseleave="isHovering = false"
-         class="cursor-none"
-       >
-         <img
-           class="h-auto max-w-full ml-40 lg:ml-0 lg:mt-50 transition-transform duration-300 ease-in-out lg:hover:scale-110 lg:hover:z-10"
-           src="/img/billede3_col2.webp"
-           alt="billede 3"
-         />
-       </div>
-     </div>
-   </div>
- </section>
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full mt-30 transition-transform duration-300 ease-in-out lg:group-hover:scale-110 lg:group-hover:z-10"
+          src="/img/billede5_col3.webp"
+          alt=""
+        />
+        <div class="absolute inset-0 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Brandon Morse</h3>
+        </div>
+      </div>
+
+      <div 
+        @mouseenter="isHovering = true" 
+        @mouseleave="isHovering = false"
+        class="cursor-none relative group"
+      >
+        <img
+          class="h-auto max-w-full ml-40 lg:ml-0 lg:mt-50 transition-transform duration-300 ease-in-out lg:group-hover:scale-110 lg:group-hover:z-10"
+          src="/img/billede3_col2.webp"
+          alt="billede 3"
+        />
+        <div class="absolute inset-0 text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3>Viola Rama</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </div>
