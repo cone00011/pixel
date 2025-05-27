@@ -16,7 +16,8 @@
 
   <!-- FULL WEEKEND -->
   <div class="relative group ml-0 border-b-2 border-transparent mt-30 lg:mt-0">
-    <a href="#ticketform">
+    <a href="#ticketform"
+    @click.prevent="if (isDesktop) window.location.href = '#ticketform'">
       <h2 
         @mouseenter="isHovering = isDesktop" 
         @mouseleave="isHovering = false" 
@@ -24,14 +25,14 @@
         :class="isDesktop ? 'blur-none hover:scale-110 hover:translate-x-2 hover:translate-y-2 group-hover:translate-y-1 cursor-none' : 'cursor-pointer'"
         class="transition duration-200 transform">
         FULL WEEKEND
-        <span class="absolute left-0 bottom-0 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
+        <span class="absolute left-0 bottom-0 lg:w-200 w-88 h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
       </h2>
     </a>
     
     <p 
       x-show="active === 1 || isDesktop" 
       x-transition 
-      class="mt-10 mr-20 transition duration-200 transform"
+      class="mt-10 mr-20 transition duration-200 transform lg:max-w-lg"
       :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
       Three days. Unlimited art. Infinite experiences. This ticket is for those who want to dive deep—from the very first pixel to the final sparkle.<br>
       <br>
@@ -41,7 +42,8 @@
 
   <!-- ONE DAY -->
   <div class="relative group mr-20 mt-10 border-b-2 border-transparent text-right">
-    <a href="#ticketform">
+    <a href="#ticketform"
+    @click.prevent="if (isDesktop) window.location.href = '#ticketform'">
       <h2 
         @mouseenter="isHovering = isDesktop" 
         @mouseleave="isHovering = false" 
@@ -49,24 +51,25 @@
         :class="isDesktop ? 'blur-none hover:scale-110 hover:translate-x-2 hover:translate-y-2 group-hover:translate-y-1 cursor-none' : 'cursor-pointer'"
         class="transition duration-200 transform">
         ONE DAY
-        <span class="absolute right-0 bottom-0 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
+        <span class="absolute right-0 bottom-0 lg:w-200 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
       </h2>
     </a>
-    
     <p 
-      x-show="active === 2 || isDesktop" 
-      x-transition 
-      class="mt-10 transition duration-200 transform"
-      :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
-      Only have one day? No worries. Pick your day and immerse yourself in a concentrated art universe that leaves a lasting impression. <br>
-      <br>
-      <strong>Price 200 DKK</strong>
-    </p>
+    x-show="active === 2 || isDesktop" 
+    x-transition 
+    class="mt-10 transition duration-200 transform lg:max-w-lg lg:ml-auto text-right"
+    :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
+    Only have one day? No worries. Pick your day and immerse yourself in a concentrated art universe that leaves a lasting impression. <br>
+    <br>
+    <strong>Price 200 DKK</strong>
+  </p>
+  
   </div>
 
   <!-- MIX & MATCH -->
   <div class="relative group mt-10 border-b-2 border-transparent">
-    <a href="#ticketform">
+    <a href="#ticketform"
+    @click.prevent="if (isDesktop) window.location.href = '#ticketform'">
       <h2 
         @mouseenter="isHovering = isDesktop" 
         @mouseleave="isHovering = false" 
@@ -74,14 +77,14 @@
         :class="isDesktop ? 'blur-none hover:scale-110 hover:translate-x-2 hover:translate-y-2 group-hover:translate-y-1 cursor-none' : 'cursor-pointer'"
         class="transition duration-200 transform">
         MIX & MATCH
-        <span class="absolute left-0 bottom-0 w-full h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
+        <span class="absolute left-0 bottom-0 lg:w-200 w-88 h-[2px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-all duration-200"></span>
       </h2>
     </a>
     
     <p 
       x-show="active === 3 || isDesktop" 
       x-transition 
-      class="mt-10 mr-20 transition duration-200 transform"
+      class="mt-10 mr-20 transition duration-200 transform lg:max-w-lg"
       :class="isDesktop ? 'opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-1' : 'opacity-100'">
       One day’s not enough, three is too much. Create your own combo—like a modular masterpiece—and tailor your PIXEL experience. <br>
       <br>
