@@ -1,15 +1,14 @@
 ---
+// Fjern 'description' fra Props
 export interface Props {
   image: ImageMetadata;
   name: string;
   date: string;
-  description: string;
   reverse?: boolean;
 }
 
-const { image, name, date, description, reverse = false } = Astro.props;
+const { image, name, date, reverse = false } = Astro.props;
 
-// Brug condition til at sætte orden og placering
 const textOrder = reverse ? 'order-2 md:order-1' : 'order-2 md:order-2';
 const imageOrder = reverse ? 'order-1 md:order-2' : 'order-1 md:order-1';
 const textCol = reverse ? 'md:col-span-7' : 'md:col-span-7';
@@ -19,10 +18,10 @@ const imageCol = reverse ? 'md:col-span-5' : 'md:col-span-5';
 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 py-12 items-start md:items-center font-prestige-elite-std">
   <!-- Tekst -->
   <div class={`col-span-1 ${textCol} ${textOrder}`}>
-    <h3 class=" ">{date}</h2>
-    <p class=" leading-relaxed max-w-prose">
-      {description}
-    </p>
+    <h3>{date}</h3>
+    <div class="leading-relaxed max-w-prose space-y-4">
+      <slot name="description" />
+    </div>
   </div>
 
   <!-- Billede -->
@@ -33,5 +32,7 @@ const imageCol = reverse ? 'md:col-span-5' : 'md:col-span-5';
       class="w-[60%] sm:w-[40%] md:w-auto lg:w-full lg:max-w-sm object-contain" 
     />
   </div>
+</div>
+
   
 

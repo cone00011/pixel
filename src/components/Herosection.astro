@@ -27,20 +27,24 @@ const { id = "" } = Astro.props;
   </h1>
 
   <h1 
-    @mouseenter="isHovering = true" 
-    @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
-  >
-    DIGITAL ART FESTIVAL
-  </h1>
+  @mouseenter="isHovering = true" 
+  @mouseleave="isHovering = false" 
+  @click="document.getElementById('what-is-pixel')?.scrollIntoView({ behavior: 'smooth' })"
+  class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
+>
+  DIGITAL ART FESTIVAL
+</h1>
 
-  <h1 
-    @mouseenter="isHovering = true" 
-    @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
-  >
-    27 - 29 JUNE
-  </h1>
+
+<h1 
+@mouseenter="isHovering = true" 
+@mouseleave="isHovering = false" 
+@click="document.getElementById('meet-the-artists')?.scrollIntoView({ behavior: 'smooth' })"
+class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
+>
+27 - 29 JUNE
+</h1>
+
 
   <h1 
     @mouseenter="isHovering = true" 

@@ -30,33 +30,80 @@ import Stickybutton from "../components/Stickybutton.astro";
   </h2>
 </section>
  
-  <div class="mx-[15px] md:mx-0">
-  <ArtistCard
-    image={viola_rama}
-    name="Viola Rama"
-    date="27. June"
-    description="Viola Rama is a contemporary artist working with photography and artificial intelligence (AI) to create surreal portraits that challenge the boundaries between the human and the digital. Her works combine technology and aesthetics in a way that both fascinates and provokes, as she explores new ways of viewing identity and the body through digital manipulation."
-  />
+<div class="mx-[15px] md:mx-0">
+  <ArtistCard image={viola_rama} name="Viola Rama" date="27. June">
+    <div slot="description">
+      <p>
+        Viola Rama is a contemporary artist working with photography and artificial intelligence (AI) to create surreal portraits that challenge the boundaries between the human and the digital. Her works combine technology and aesthetics in a way that both fascinates and provokes, as she explores new ways of viewing identity and the body through digital manipulation.
+      </p>
+      <p class="mt-5">
+        Check out their{" "}
+        <a
+          href="https://www.instagram.com/violaorama/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-black"
+        >
+          Instagram
+        </a>
+      </p>
+    </div>
+  </ArtistCard>
 </div>
+
 
 <div class="mx-[15px] md:mx-0">
   <ArtistCard
     image={bradon_morse}
     name="Brandon Morse"
     date="28. June"
-    description="Brandon Morse is an American artist who primarily works with video installations and generative art. His digital works are characterized by complex, algorithmic structures created through coding and real-time generation. Morse's pieces often focus on themes such as time, decay, and transformation, visualized through abstract digital landscapes."
     reverse={true}
-  />
+  >
+    <div slot="description">
+      <p>
+        Brandon Morse is an American artist who primarily works with video installations and generative art. His digital works are characterized by complex, algorithmic structures created through coding and real-time generation. Morse's pieces often focus on themes such as time, decay, and transformation, visualized through abstract digital landscapes.
+      </p>
+      <p class="mt-5">
+        Check out their{" "}
+        <a
+          href="https://www.instagram.com/e_brandon_morse/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-black"
+        >
+          Instagram
+        </a>
+      </p>
+    </div>
+  </ArtistCard>
 </div>
+
 
 <div class="mx-[15px] md:mx-0">
   <ArtistCard
     image={danielle}
     name="Danielle Brathwaite-Shirley"
     date="29. June"
-    description="Danielle Brathwaite-Shirley is a British artist working with digital media, including interactive games, video installations, and animation. Her work focuses on retelling the stories of Black trans people through technology, inviting audiences to interact with her digital worlds. Her artworks create space for inclusion and challenge the way we think about identity and technology."
-  />
+  >
+    <div slot="description">
+      <p>
+        Danielle Brathwaite-Shirley is a British artist working with digital media, including interactive games, video installations, and animation. Her work focuses on retelling the stories of Black trans people through technology, inviting audiences to interact with her digital worlds. Her artworks create space for inclusion and challenge the way we think about identity and technology.
+      </p>
+      <p  class="mt-5">
+        Check out their{" "}
+        <a
+          href="https://www.instagram.com/ladydangfua/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-black"
+        >
+          Instagram
+        </a>
+      </p>
+    </div>
+  </ArtistCard>
 </div>
+
 
 <section id="what-is-pixel">
   <WhatIsPixel />
