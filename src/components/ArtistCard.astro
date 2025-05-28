@@ -4,10 +4,11 @@ export interface Props {
   image: ImageMetadata;
   name: string;
   date: string;
+  time: string;
   reverse?: boolean;
 }
 
-const { image, name, date, reverse = false } = Astro.props;
+const { image, name, date, time, reverse = false } = Astro.props;
 
 const textOrder = reverse ? 'order-2 md:order-1' : 'order-2 md:order-2';
 const imageOrder = reverse ? 'order-1 md:order-2' : 'order-1 md:order-1';
@@ -19,6 +20,7 @@ const imageCol = reverse ? 'md:col-span-5' : 'md:col-span-5';
   <!-- Tekst -->
   <div class={`col-span-1 ${textCol} ${textOrder}`}>
     <h3>{date}</h3>
+    <p class="font-bold mb-5">{time}</p>
     <div class="leading-relaxed max-w-prose space-y-4">
       <slot name="description" />
     </div>
