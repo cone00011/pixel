@@ -6,8 +6,8 @@ const { id = "" } = Astro.props;
   x-data="{
     x: Math.random() * (window.innerWidth - 300),
     y: Math.random() * (window.innerHeight - 100),
-    dx: (Math.random() - 0.5) * 5,
-    dy: (Math.random() - 0.5) * 5,
+    dx: 1.2,
+    dy: 1.2,
     speedFactor: window.innerWidth < 768 ? 2 : 4.1, // Slower on mobile
     mouseX: 0,
     mouseY: 0,
