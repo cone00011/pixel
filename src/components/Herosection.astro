@@ -5,7 +5,7 @@ const { id = "" } = Astro.props;
   id={id}
   x-data="{ mouseX: 0, mouseY: 0, isHovering: false }" 
   @mousemove.window="mouseX = $event.clientX; mouseY = $event.clientY"
-  class="relative text-[60px] lg:text-[100px] ml-20 mt-30 lg:mt-10 select-none"
+  class="relative text-[60px] lg:text-[100px]  ml-20 mt-30 lg:mt-10 select-none"
 >
 
   <!-- Custom Cursor -->
@@ -21,7 +21,7 @@ const { id = "" } = Astro.props;
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none font-catavalo text-[70px] lg:text-[120px]"
+    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none font-catavalo text-[70px] lg:text-[120px] 2xl:text-[130px]"
   >
     PIXEL
   </h1>
@@ -30,7 +30,7 @@ const { id = "" } = Astro.props;
   @mouseenter="isHovering = true" 
   @mouseleave="isHovering = false" 
   @click="document.getElementById('what-is-pixel')?.scrollIntoView({ behavior: 'smooth' })"
-  class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
+  class="lg:blur-sm hover:blur-none transition duration-200 cursor-none 2xl:text-[130px]"
 >
   DIGITAL ART FESTIVAL
 </h1>
@@ -40,7 +40,7 @@ const { id = "" } = Astro.props;
 @mouseenter="isHovering = true" 
 @mouseleave="isHovering = false" 
 @click="document.getElementById('meet-the-artists')?.scrollIntoView({ behavior: 'smooth' })"
-class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
+class="lg:blur-sm hover:blur-none transition duration-200 cursor-none 2xl:text-[130px]"
 >
 27 - 29 JUNE
 </h1>
@@ -49,7 +49,7 @@ class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
   <h1 
     @mouseenter="isHovering = true" 
     @mouseleave="isHovering = false" 
-    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none"
+    class="lg:blur-sm hover:blur-none transition duration-200 cursor-none 2xl:text-[130px]"
   >
     NIKOLAJ KUNSTHAL
   </h1>
